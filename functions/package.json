@@ -1,0 +1,40 @@
+{
+  "name": "@fusionstrings/project-fusion-sapper",
+  "description": "TODO",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rm -rf build",
+    "dev": "sapper dev",
+    "build": "sapper build",
+    "build:functions": "cross-env NODE_ENV=production sapper build && cp assets/*.* ../public",
+    "export": "sapper export",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "node build && npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "compression": "^1.7.1",
+    "firebase-admin": "^5.13.1",
+    "firebase-functions": "^2.0.2",
+    "polka": "^0.4.0",
+    "sapper": "^0.15.0",
+    "sirv": "^0.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "npm-run-all": "^4.1.2",
+    "svelte": "^2.0.0",
+    "svelte-loader": "^2.9.0",
+    "webpack": "^4.7.0"
+  },
+  "private": true,
+  "engines": {
+    "node": "8"
+  }
+}
