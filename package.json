@@ -1,0 +1,11 @@
+{
+  "name": "project-fusion-firebase-sapper",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd functions && npm run dev",
+    "serve": "cd functions && npm run build && cd .. && firebase serve"
+  },
+  "repository": "git@github.com:fusionstrings/firebase-functions-sapper.git",
+  "author": "Dilip Kr. Shukla <contact@fusionstrings.com>",
+  "license": "MIT"
+}

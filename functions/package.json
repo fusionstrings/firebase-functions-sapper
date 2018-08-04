@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf build",
-    "dev": "sapper dev",
+    "dev": "cross-env DEV=local sapper dev",
     "build": "sapper build",
     "build:functions": "cross-env NODE_ENV=production sapper build && cp assets/*.* ../public",
     "export": "sapper export",
